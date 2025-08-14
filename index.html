@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Early Birds</title>
     <link rel="stylesheet" href="styles/normilize.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -11,11 +10,205 @@
 <body>
     <header class="header">
         <div class="header__top-bar">
-
+            Welcome to Early Birds. We ship every Tuesday and Thursday. Free shipping above €25 in The Netherlands.
         </div>
-        <div class="header__body">
-            
+        <div class="header__main">
+            <div class="header__main-part header__main-left-part">
+                <nav class="header__inner-left-menu">
+                    <ul class="header__inner-list">
+                        <a class="header__menu-link" href="/">
+                            <li class="header__inner-item has-underline">Home</li>
+                        </a>
+                        <a class="header__menu-link" href="/">
+                            <li class="header__inner-item has-underline">Pages</li>
+                        </a>
+                        <a class="header__menu-link" href="/">
+                            <li class="header__inner-item has-underline">Shop</li>
+                        </a>
+                        <a class="header__menu-link" href="/">
+                            <li class="header__inner-item has-underline">Blog</li>
+                        </a>
+                    </ul>            
+                </nav>
+            </div>
+            <a class="header__logo">
+                <img 
+                    src="./icons/logo.svg" alt="logo"
+                    class="header__logo-image"
+                    width="165" height="37"
+                >
+            </a>
+            <div class="header__main-part header__main-right-part">
+                <nav class="header__inner-right-menu">
+                    <ul class="header__inner-list">
+                        <a class="header__menu-link" href="/">
+                            <li class="header__inner-item has-underline">cart(0)</li>
+                        </a>
+                        <a class="header__menu-link" href="/">
+                            <li class="header__inner-item has-underline">search</li>
+                        </a>
+                    </ul>
+                </nav>
+                <div class="header__logo-search">
+                    <img 
+                        src="./icons/star-icon.svg" alt="logo-search"
+                    >
+                </div>
+            </div>
         </div>
     </header>
+    <main class="content">
+        <h1 class="visually-hidden">Early Birds Coffee</h1>
+        <section class="banner">
+            <div class="banner__image-wrapper">
+                <img 
+                    src="./images/banner-bg.png" alt="banner image"
+                    width="999" height="988" class="banner__image"
+                >
+            </div>
+            <div class="banner__body">
+                <h2 class="banner__title natural-product with-love">
+                    Enjoy <br>
+                    life sip <br>
+                    by sip
+                </h2>
+            </div>
+        </section>
+        <section class="our-blends container-wide">
+            <header class="our-blends__header">
+                <ul class="our-blends__header-list">
+                    <a href="/" class="our-blends__header-link">
+                        <li class="our-blends__header-item">Fairtrade</li>
+                    </a>
+                    <a href="/" class="our-blends__header-link">
+                        <li class="our-blends__header-item">Organic</li>
+                    </a>
+                    <a href="/" class="our-blends__header-link">
+                        <li class="our-blends__header-item">Climat neutral</li>
+                    </a>
+                </ul>
+            </header>
+            <div class="our-blends__body container-wide">
+                <div class="our-blends__content">
+                    <div class="our-blends__content-wrapper">
+                        <h2 class="our-blends__title">
+                            Our blends deliver on the promise of <br> balance and consistency,
+                            <span class="has-outline">roasted to</span> <br>
+                            maximize sweetness.
+                        </h2>
+                        <div class="our-blends__description-wrapper">
+                            <p class="our-blends__description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                                Ut elit tellus, luctus nec ullamcorper. maximize sweetness.
+                            </p>
+                        </div>
+                    </div>
+                    <button class="view-more-button button--transparent--without-border has-arrow">
+                        View more
+                    </button>
+                </div>
+                <div class="our-blends__products">
+                    <a href="/" class="our-blends__product-wrapper">
+                        <div class="our-blends__arabica our-blends__product">
+                            <img 
+                                src="./images/arabica.png" 
+                                alt="arabica"
+                                width="394" height="408"
+                                loading="lazy"
+                            >
+                            <div class="our-blends__price">
+                                <h3 class="our-blends__price-title">
+                                    Arabica Bekele                            
+                                </h3>
+                                <p class="price">
+                                    $44.00
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/" class="our-blends__product-wrapper">
+                        <div class="our-blends__robusta our-blends__product">
+                            <img 
+                                src="./images/robusta.png" 
+                                alt="robusta"
+                                width="394" height="408" 
+                                loading="lazy"
+                            >
+                            <div class="our-blends__price">
+                                <h3 class="our-blends__price-title">
+                                    Robusta Santa
+                                </h3>
+                                <p class="price">
+                                    $35.00
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="slogan-bar container-wide">
+            <img src="./images/slogan-bar-bg.png" alt="slogan bar bg">
+            <h2 class="slogan-bar__title">
+                More than just a coffee shop
+            </h2>
+        </section>
+        <section class="coffee-quality container-wide">
+            <h2 class="visually-hidden">Coffee quality</h2>
+            <div class="coffee-quality__body">
+                <blockquote class="coffee-quality__quote five-stars">
+                    <p class="coffee-quality__title title-small">
+                        "Another reason people just can't keep away from <br> 
+                        their local coffee shop is the quality of coffee <br>
+                        that's on offer. "
+                    </p>
+                    <cite class="quote-author">Henry Monro</cite>
+                </blockquote>
+                <ul class="coffee-quality__pagination-list">
+                    <li class="coffee-quality__pagination-item"></li>
+                    <li class="coffee-quality__pagination-item"></li>
+                    <li class="coffee-quality__pagination-item"></li>
+                </ul>
+            </div>
+            <div class="coffee-quality__image">
+                <img src="./images/coffee-quality-image.png" alt="cup with coffee">
+            </div>
+        </section>
+        <section class="coffee-centers container-wide">
+            <h2 class="visually-hidden">Coffee centers in different cities</h2>
+            <div class="coffee-centers__other-cities">
+                <ul class="coffee-centers__other-cities-list">
+                    <li class="coffee-centers__other-cities-item">Lisbon Coffee Salon</li>
+                    <li class="coffee-centers__other-cities-item">Berline Coffee Roastery</li>
+                    <li class="coffee-centers__other-cities-item">Amsterdam Coffee Shop</li>
+                </ul>
+            </div>
+            <div class="coffee-centers__amsterdam coffee-center">
+                <img 
+                    src="./images/amsterdam-coffee-image.png" 
+                    alt="cup with coffee"
+                    class="coffee-centers__amsterdam-image"
+                    width="960" height="781"
+                >
+                <div class="coffee-centers__body">
+                    <h2 class="coffee-centers__body-title">
+                        Amsterdam Centre Coffee
+                    </h2>
+                    <div class="coffee-centeres__body-list">
+                        <address class="coffee-centeres__body-item">Weteringstraat 48,1017,Amsterdam</address>
+                        <a href="tel:0207718364" class="coffee-centeres__body-item">Tel: 020-7718364</a>
+                        <a href="mailto:earlybirds@info.com" class="coffee-centeres__body-item">Email:earlybirds@info.com</a>
+                        <div class="coffee-centers__body-schedule coffee-centeres__body-item">
+                            Mon-Fri..........6.45am-3.00pm <br>
+                            Sat-Sun.........8.30am-4.00pm
+                        </div>
+                    </div>
+                    <button class="coffee-centers__body-button button button--leaky">
+                        Contact us
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
