@@ -76,13 +76,8 @@ a:hover {
     color: var(--color-text-muted);
 }
 
-.has-arrow {
-    position: relative;
-}
-
-
 .title-tiny {
-    font-size: clamp(16px, 1.3vw, 25px);
+    font-size: clamp(14px, 1.3vw, 25px);
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -170,19 +165,19 @@ button.has-arrow:hover {
 
 button.has-arrow:hover::after{
     transition-duration: var(--transition-duration);
-    translate: 10px 0;
+    translate: 10px -50%;
 }
 
 .has-arrow::after {
     content: '';
     background: url("../icons/right-row.svg");
     display: inline-block;
-    top: 50%;
-    translate: 0 -50%;
+    position: absolute;
     width: 28px;
     height: 25px;
     left: calc(100% + 5px);
-    top: 0;
+    top: 50%;
+    translate: 0 -50%;
 }
 
 .button--transparent {
@@ -314,6 +309,8 @@ button.has-arrow:hover::after{
     line-height: 1;
     font-size: 18px;
     letter-spacing: 0.01em;
+
+    padding-top: 3px;
 }
 
 .mark-sold {
@@ -339,16 +336,21 @@ button.has-arrow:hover::after{
     line-height: 1;
     font-size: 18px;
     letter-spacing: 0.01em;
+
+    padding-top: 3px;
 }
 
 
 .coffee-product {
-    border-left: var(--base-border);
     display: flex;
     padding-bottom: 35px;
     flex-grow: 1;
     flex-direction: column;
     align-items: center;
+}
+
+.coffee-product-wrapper:not(:first-child) {
+    border-left: var(--base-border);
 }
 
 .coffee-price {
@@ -424,6 +426,7 @@ button.has-arrow:hover::after{
 
 .banner {
     background-color: var(--color-white);
+    border-inline: var(--base-border);
     display: grid;
     grid-template-columns: 52% 48%;
     background: url("../images/bg-dots.png") center/cover;
@@ -512,6 +515,8 @@ button.has-arrow:hover::after{
     padding-left: 93px;
     padding-right: 5px;
     row-gap: 10px;
+
+    border-right: var(--base-border);
 }
 
 
@@ -552,6 +557,11 @@ button.has-arrow:hover::after{
     align-items: center;
 }
 
+
+.coffee-centers__amsterdam  {
+    border-right: var(--base-border);
+}
+
 .slogan-bar__title {
     text-align: center;
     line-height: 1.1;
@@ -568,6 +578,8 @@ button.has-arrow:hover::after{
 .coffee-quality {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    border-inline: var(--base-border);
 }
 
 .coffee-quality__body {
@@ -587,7 +599,6 @@ button.has-arrow:hover::after{
 
 
 /* coffee centers */
-
 button.coffee-centers__other-cities-item {
     text-align: left;
 }
@@ -679,10 +690,13 @@ button.coffee-centers__other-cities-item:hover {
     flex-grow: 1;
 }
 
+/* coffee-menu */
 
 .coffee-menu {
     display: flex;
     flex-direction: column;
+    border-bottom: var(--base-border);
+    border-inline: var(--base-border);
 }
 
 .coffee-menu__products {
@@ -772,7 +786,6 @@ button.coffee-centers__other-cities-item:hover {
         padding-block: 30px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* column-gap: 30px; */
     }
     .coffee-centers__other-cities-list {
         justify-content: space-evenly;
@@ -884,6 +897,7 @@ button.coffee-centers__other-cities-item:hover {
     .coffee-product.mark-sold::after {
         width: 53px;
         font-size: 14px;
+    }
     .menu-food {
         display: flex;
         flex-direction: column;
@@ -902,7 +916,6 @@ button.coffee-centers__other-cities-item:hover {
     }
     .menu-food__body {
         padding-inline: 50px;
-    }
     }
 }
 
