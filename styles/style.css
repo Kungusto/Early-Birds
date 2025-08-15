@@ -162,7 +162,9 @@ button.has-arrow:hover::after{
     border: none;
 }
 
-
+.button--without-border {
+    border: none;
+}
 
 .button--leaky {
     background: url("../images/bg-white-dots.png") 50%/cover repeat;
@@ -499,7 +501,24 @@ button.has-arrow:hover::after{
 
 
 /* coffee centers */
+
+button.coffee-centers__other-cities-item {
+    text-align: left;
+}
+
+button.coffee-centers__other-cities-item:not(:first-child) {
+    border-block: var(--base-border);
+}
+
+
+button.coffee-centers__other-cities-item:hover {
+    background-color: var(--color-white);
+    padding-top: 70px;
+}
+
+
 .coffee-centers {
+    background-color: var(--color-light);
     border-top: var(--base-border);
     display: flex;
 }
@@ -528,9 +547,9 @@ button.has-arrow:hover::after{
     padding-block: 22px;
     font-size: clamp(30px, 2.6vw, 50px);
     font-family: var(--font-family-secondary);
-    border-left: var(--base-border);
     line-height: 1.2;
 }
+
 
 
 .coffee-centers__body-title {
@@ -606,6 +625,15 @@ button.has-arrow:hover::after{
     .coffee-centers__other-cities-list {
         border-bottom: var(--base-border);
     }
+    button.coffee-centers__other-cities-item:not(:first-child) {
+        border-block: none;
+    }
+    button.coffee-centers__other-cities-item {
+        text-align: center;
+    }
+    button.coffee-centers__other-cities-item:hover {
+        padding-block: 20px;
+    }
 }
 
 
@@ -626,6 +654,12 @@ button.has-arrow:hover::after{
     .coffee-centers__other-cities-item:not(:last-child) {
         border-right: none;
         border-bottom: var(--base-border);
+    }
+    button.coffee-centers__other-cities-item:not(:last-child) {
+        border-bottom: var(--base-border);
+    }
+    button.coffee-centers__other-cities-item:hover {
+        padding-block: 22px;
     }
 }
 
