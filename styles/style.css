@@ -91,7 +91,7 @@ a:hover {
 
 
 .title-small {
-    font-size: clamp(12px, 1.82vw, 35px);
+    font-size: clamp(16px, 1.82vw, 35px);
     font-weight: 400;
     line-height: 1.29;
     letter-spacing: 0.02em;
@@ -160,6 +160,10 @@ address {
 }
 
 
+.has-arrow {
+    position: relative;
+}
+
 button.has-arrow:hover {
     color: var(--color-text-muted);
 }
@@ -173,7 +177,8 @@ button.has-arrow:hover::after{
     content: '';
     background: url("../icons/right-row.svg");
     display: inline-block;
-    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
     width: 28px;
     height: 25px;
     left: calc(100% + 5px);
@@ -187,6 +192,13 @@ button.has-arrow:hover::after{
 .button--transparent--without-border {
     background-color: transparent;
     border: none;
+    font-size: clamp(12px, 0.8vw, 16px);
+    font-family: var(--font-family-secondary);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .button--without-border {
@@ -682,6 +694,70 @@ button.coffee-centers__other-cities-item:hover {
     flex-grow: 1;
 }
 
+.price {
+    font-size: clamp(12px, 0.93vw, 18px);
+}
+
+/* menu-food */
+.menu-food {
+    background-color: var(--color-light-yellow);
+    border-inline: var(--base-border);
+    border-bottom: var(--base-border);
+    display: grid;
+    grid-template-columns: 41.7% 58.3%;
+}
+
+.menu-food__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    row-gap: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 142px;
+}
+
+.menu-food__body-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-food__list {
+    display: flex;
+    flex-direction: column;
+    border-left: var(--base-border);
+}
+
+.menu-food__item {
+    padding-left: 58px;
+    padding-top: 45px;
+    padding-bottom: 48px;
+    flex-grow: 1;
+}
+
+.menu-food__item:not(:last-child) {
+    border-bottom: var(--base-border);
+}
+
+.menu-food__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 65px;
+}
+
+.menu-food__item-description {
+    font-size: clamp(12px, 0.93vw, 18px)
+}
+
+.menu-food__item-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+
+
 
 
 @media (max-width: 1700px) {
@@ -751,6 +827,9 @@ button.coffee-centers__other-cities-item:hover {
     button.coffee-centers__other-cities-item:hover {
         padding-block: 22px;
     }
+    .menu-food__item {
+        padding-left: 30px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -800,10 +879,30 @@ button.coffee-centers__other-cities-item:hover {
     .coffee-product.mark-new::after {
         width: 50px;
         font-size: 14px;
+        padding-top: 0px;
     }
     .coffee-product.mark-sold::after {
         width: 53px;
         font-size: 14px;
+    .menu-food {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-food__list {
+        border-top: var(--base-border);
+    }
+    .menu-food__body {
+        padding-bottom: 20px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .menu-food__body-title {
+        display: flex;
+        align-items: center;
+    }
+    .menu-food__body {
+        padding-inline: 50px;
+    }
     }
 }
 
@@ -874,5 +973,15 @@ button.coffee-centers__other-cities-item:hover {
     .coffee-product.mark-sold::after {
         width: 71px;
         font-size: 18px;
+    }
+    .menu-food__item-wrapper {
+        display: block
+    }
+    .menu-food__body {
+        flex-direction: column;
+        align-items: start;
+    }
+    .menu-food__body-title br {
+        display: none;
     }
 }

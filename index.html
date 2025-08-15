@@ -270,6 +270,112 @@
                 </a>
             </div>
         </section>
+        <section class="menu-food container-wide">
+            <div class="menu-food__body">
+                <h2 class="menu-food__body-title title-big">swing by our place <br> we also Have food.</h2>
+                <img 
+                    src="./images/menu-food.png" 
+                    alt="menu and nuts" 
+                    class="menu-food__body-image"
+                    height="237" width="315"
+                >
+            </div>
+            <ul class="menu-food__list">
+                <li class="menu-food__item">
+                    <div class="menu-food__item-wrapper">
+                            <div class="menu-food__item-info">
+                                <h2 class="menu-food__item-title title-small">
+                                    Delivery
+                                </h2>
+                                <p class="menu-food__item-description">
+                                    Vivamus hendrerit at sapien nec mattis. Quisque quis arcu
+                                </p>
+                            </div>
+                        <button class="menu-food__item-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
+                    </div>
+                </li>
+                <li class="menu-food__item">
+                    <div class="menu-food__item-wrapper">
+                            <div class="menu-food__item-info">
+                                <h2 class="menu-food__item-title title-small">
+                                    Wholesale
+                                </h2>
+                                <p class="menu-food__item-description">
+                                    Pellentesque in tempor lorem, vel porttitor est.                            
+                                </p>
+                            </div>
+                        <button class="menu-food__item-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
+                    </div>
+                </li>
+                <li class="menu-food__item">
+                    <div class="menu-food__item-wrapper">
+                            <div class="menu-food__item-info">
+                                <h2 class="menu-food__item-title title-small">
+                                    Consistency
+                                </h2>
+                                <p class="menu-food__item-description">
+                                    Aliquam ut arcu sodales, gravida quam vitae.
+                                </p>
+                            </div>
+                        <button class="menu-food__item-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
+                    </div>
+                </li>
+                <li class="menu-food__item">
+                    <div class="menu-food__item-wrapper">
+                            <div class="menu-food__item-info">
+                                <h2 class="menu-food__item-title title-small">
+                                    Quality
+                                </h2>
+                                <p class="menu-food__item-description">
+                                    Nam at sapien ligula. Morbi maximus scelerisque mi sed.
+                                </p>
+                            </div>
+                        <button class="menu-food__item-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="reserve-table">
+            <h2 class="reserve-table__title title-medium">Reserve Your Table</h2>
+            <form class="reserve-table__form">
+                <label for="persons" class="visually-hidden">Persons</label>
+                <select name="persons" id="persons" class="reserve-table__person-form input" required>
+                    <option value="1" class="reserver-table__form-person-choise" selected>1 person</option>
+                    <option value="2" class="reserver-table__form-person-choise">2 person</option>
+                    <option value="3" class="reserver-table__form-person-choise">3 person</option>
+                    <option value="3" class="reserver-table__form-person-choise">3 person</option>
+                    <option value="4" class="reserver-table__form-person-choise">4 person</option>
+                    <option value="5" class="reserver-table__form-person-choise">5 person</option>
+                </select>
+                <label for="day" class="visually-hidden">Day</label>
+                <input type="date" id="day" class="reserver-table__form-day input">
+                <label for="time" class="visually-hidden">Day</label>
+                <select id="time" class="reserver-table__form-time input">
+                    <option value="8:00" class="reserver-table__form-time-choise"><time datetime="8:00">8:00</time></option>
+                    <option value="9:00" class="reserver-table__form-time-choise"><time datetime="9:00">9:00</time></option>
+                    <option value="10:00" class="reserver-table__form-time-choise"><time datetime="10:00">10:00</time></option>
+                    <option value="11:00" class="reserver-table__form-time-choise" select><time datetime="11:00">11:00</time></option>
+                    <option value="12:00" class="reserver-table__form-time-choise"><time datetime="12:00">12:00</time></option>
+                    <option value="13:00" class="reserver-table__form-time-choise"><time datetime="13:00">13:00</time></option>
+                    <option value="14:00" class="reserver-table__form-time-choise"><time datetime="14:00">14:00</time></option>
+                    <option value="15:00" class="reserver-table__form-time-choise"><time datetime="15:00">15:00</time></option>
+                    <option value="16:00" class="reserver-table__form-time-choise"><time datetime="16:00">16:00</time></option>
+                    <option value="17:00" class="reserver-table__form-time-choise"><time datetime="17:00">17:00</time></option>
+                    <option value="18:00" class="reserver-table__form-time-choise"><time datetime="18:00">18:00</time></option>
+                    <option value="19:00" class="reserver-table__form-time-choise"><time datetime="19:00">19:00</time></option>
+                    <option value="20:00" class="reserver-table__form-time-choise"><time datetime="20:00">20:00</time></option>
+                </select>
+                <button class="reserver-table__form-button button button--leaky" type="submit">Book a Table</button>
+            </form>
+        </section>
     </main>
 </body>
 </html>
