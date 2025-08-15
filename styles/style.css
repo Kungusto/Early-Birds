@@ -81,9 +81,36 @@ a:hover {
 }
 
 
+.title-tiny {
+    font-size: clamp(16px, 1.3vw, 25px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    font-family: var(--font-family-secondary);
+}
+
+
 .title-small {
     font-size: clamp(12px, 1.82vw, 35px);
     font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: 0.02em;
+    font-family: var(--font-family-secondary);
+}
+
+.title-medium {
+    font-size: clamp(18px, 2.6vw, 50px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    font-family: var(--font-family-secondary);
+}
+
+.title-big {
+    font-size: clamp(25px, 3.64vw, 70px);
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: -0.02em;
     font-family: var(--font-family-secondary);
 }
 
@@ -252,6 +279,74 @@ button.has-arrow:hover::after{
 }
 
 
+.mark-new {
+    position: relative;
+}
+
+
+.mark-new::after {
+    width: 67px;
+    aspect-ratio: 67/34;
+    content: 'new';
+    background: var(--color-accent);
+    position: absolute;
+    display: inline-flex;
+    top: 15px;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-family-secondary);
+    color: var(--color-dark-primary);
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+}
+
+.mark-sold {
+    position: relative;
+}
+
+
+.mark-sold::after {
+    width: 71px;
+    aspect-ratio: 67/34;
+    content: 'sold';
+    background: var(--color-dark-secondary);
+    position: absolute;
+    display: inline-flex;
+    top: 15px;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-family-secondary);
+    color: var(--color-white);
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+}
+
+
+.coffee-product {
+    border-left: var(--base-border);
+    display: flex;
+    padding-bottom: 35px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coffee-price {
+    display: flex;
+    flex-direction: column;
+    padding-left: 43px;
+    align-self: start;
+}
+
+
 /* Header */
 .header {
     background-color: var(--color-white);
@@ -384,7 +479,6 @@ button.has-arrow:hover::after{
     width: 1px;
 
     background-color: var(--color-dark-primary);
-
 }
 
 .our-blends__body {
@@ -418,44 +512,24 @@ button.has-arrow:hover::after{
     display: flex;
 }
 
-.our-blends__product {
-    border-left: var(--base-border);
-    display: flex;
-    padding-bottom: 35px;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-}
 
 .our-blends__product-wrapper {
     flex-grow: 1;
-}
-
-.our-blends__price {
-    display: flex;
-    flex-direction: column;
-    padding-left: 43px;
-    align-self: start;
 }
 
 .our-blends__body:not(:last-child) {
     border-right: var(--base-border);
 }
 
-.our-blends__title {
-    font-weight: 400;
-    line-height: 1.2;
-    font-size: clamp(18px, 2.6vw, 50px);
-}
-
 .our-blends__description {
     font-size: clamp(12px, 0.93vw, 18px);
 }
 
-.our-blends__price-title {
-    font-size: clamp(16px, 1.3vw, 25px);
-    line-height: 1.2;
+.coffee-menu__title {
+    padding-left: 50px;
+    padding-block: 38px;
 }
+
 
 /* slogan-bar */
 
@@ -519,7 +593,7 @@ button.coffee-centers__other-cities-item:hover {
 
 .coffee-centers {
     background-color: var(--color-light);
-    border-top: var(--base-border);
+    border-block: var(--base-border);
     display: flex;
 }
 
@@ -592,6 +666,22 @@ button.coffee-centers__other-cities-item:hover {
 .coffee-centers__body {
     flex-grow: 1;
 }
+
+
+.coffee-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.coffee-menu__products {
+    display: flex;
+    border-top: var(--base-border);
+}
+
+.coffee-product-wrapper {
+    flex-grow: 1;
+}
+
 
 
 @media (max-width: 1700px) {
@@ -696,7 +786,6 @@ button.coffee-centers__other-cities-item:hover {
     .our-blends__content {
         padding-block: 50px;
         padding-left: 0;
-
         row-gap: 10px;
     }
     .view-more-button {
@@ -704,6 +793,17 @@ button.coffee-centers__other-cities-item:hover {
     }
     .our-blends__content {
         padding-left: 15px;
+    }
+    .our-blends__products {
+        border-top: var(--base-border);
+    }
+    .coffee-product.mark-new::after {
+        width: 50px;
+        font-size: 14px;
+    }
+    .coffee-product.mark-sold::after {
+        width: 53px;
+        font-size: 14px;
     }
 }
 
@@ -759,5 +859,20 @@ button.coffee-centers__other-cities-item:hover {
     }
     .coffee-centers__body {
         padding-top: 15px;
+    }
+    .coffee-menu__products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .coffee-product {
+        border-bottom: var(--base-border);;
+    }
+    .coffee-product.mark-new::after {
+        width: 67px;
+        font-size: 18px;
+    }
+    .coffee-product.mark-sold::after {
+        width: 71px;
+        font-size: 18px;
     }
 }
