@@ -17,16 +17,24 @@
                 <nav class="header__inner-left-menu">
                     <ul class="header__inner-list">
                         <a class="header__menu-link" href="/">
-                            <li class="header__inner-item has-underline">Home</li>
+                            <li class="header__inner-item has-underline--header-link">
+                                Home
+                            </li>
                         </a>
                         <a class="header__menu-link" href="/">
-                            <li class="header__inner-item has-underline">Pages</li>
+                            <li class="header__inner-item has-underline--header-link">
+                                Pages
+                            </li>
                         </a>
                         <a class="header__menu-link" href="/">
-                            <li class="header__inner-item has-underline">Shop</li>
+                            <li class="header__inner-item has-underline--header-link">
+                                Shop
+                            </li>
                         </a>
                         <a class="header__menu-link" href="/">
-                            <li class="header__inner-item has-underline">Blog</li>
+                            <li class="header__inner-item has-underline--header-link">
+                                Blog
+                            </li>
                         </a>
                     </ul>            
                 </nav>
@@ -42,10 +50,10 @@
                 <nav class="header__inner-right-menu">
                     <ul class="header__inner-list">
                         <a class="header__menu-link" href="/">
-                            <li class="header__inner-item has-underline">cart(0)</li>
+                            <li class="header__inner-item has-underline--header-link">cart(0)</li>
                         </a>
                         <a class="header__menu-link" href="/">
-                            <li class="header__inner-item has-underline">search</li>
+                            <li class="header__inner-item has-underline--header-link">search</li>
                         </a>
                     </ul>
                 </nav>
@@ -377,7 +385,9 @@
             </form>
         </section>
         <section class="team container-wide">
-            <h2 class="team__title title-big">Our Awesome Team</h2>
+            <header class="team__header">
+                <h2 class="team__title title-big">Our Awesome Team</h2>
+            </header>
             <ul class="team__list">
                 <li class="team__member">
                     <img src="./images/team/1.png" alt="Uma Clark - Manager">
@@ -419,6 +429,130 @@
                     <div class="team__member-info">
                         <h3 class="team__member-name title-tiny">Rita Flams</h3>    
                         <p class="team__member-position description">Sales person</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="posts container-wide">
+            <div class="posts__info">
+                <h2 class="posts__title title-big">Recent blog <br> posts Explore Now</h2>
+                <button class="posts__button button button--leaky">
+                    Read All news
+                </button>
+            </div>
+            <ul class="posts__list">
+                <li class="posts__item">
+                    <img src="./images/posts/1.png" alt="leaves" class="posts__post-image">
+                    <div class="posts__item-wrapper">
+                        <div class="posts__post-info">
+                            <ul class="posts__post-header-list">
+                                <li class="posts__post-header-item">
+                                    Novemb<span class="has-underline">er 1</span>, 2022
+                                </li>
+                                <li class="posts__post-header-item">
+                                    c<span class="has-underline">ortad</span>o
+                                </li>
+                            </ul>
+                            <h3 class="posts__post-title title-small">Make sure your coffee is as fresh as it can be.</h3>
+                        </div>
+                        <button class="posts__view-more-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
+                    </div>
+                </li>
+                <li class="posts__item">
+                    <img src="./images/posts/2.png" alt="leaves" class="posts__post-image">
+                    <div class="posts__item-wrapper">
+                        <div class="posts__post-info">
+                            <ul class="posts__post-header-list">
+                                <li class="posts__post-header-item">
+                                    Novemb<span class="has-underline">er 2</span>, 2022
+                                </li>
+                                <li class="posts__post-header-item">
+                                    c<span class="has-underline">ortad</span>o
+                                </li>
+                            </ul>
+                            <h3 class="posts__post-title title-small">The Best Coffee Advent Calendars of this year</h3>
+                        </div>
+                        <button class="posts__view-more-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
+                    </div>
+                </li>
+                <li class="posts__item">
+                    <img src="./images/posts/3.png" alt="leaves" class="posts__post-image">
+                    <div class="posts__item-wrapper">
+                        <div class="posts__post-info">
+                            <ul class="posts__post-header-list">
+                                <li class="posts__post-header-item">
+                                    Novemb<span class="has-underline">er 2</span>, 2022
+                                </li>
+                                <li class="posts__post-header-item">
+                                    c<span class="has-underline">ortad</span>o
+                                </li>
+                            </ul>
+                            <h3 class="posts__post-title title-small">The Most Common Way People Drink Noir Café</h3>
+                        </div>
+                        <button class="posts__view-more-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
+                    </div>
+                </li>
+                <li class="posts__item">
+                    <img src="./images/posts/4.png" alt="leaves" class="posts__post-image">
+                    <div class="posts__item-wrapper">
+                        <div class="posts__post-info">
+                            <ul class="posts__post-header-list">
+                                <li class="posts__post-header-item">
+                                    Novemb<span class="has-underline">er 2</span>, 2022
+                                </li>
+                                <li class="posts__post-header-item">
+                                    c<span class="has-underline">ortad</span>o
+                                </li>
+                            </ul>
+                            <h3 class="posts__post-title title-small">Coffee Beans Prepared In Four Different Ways</h3>
+                        </div>
+                        <button class="posts__view-more-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
+                    </div>
+                </li>
+                <li class="posts__item">
+                    <img src="./images/posts/5.png" alt="leaves" class="posts__post-image">
+                    <div class="posts__item-wrapper">
+                        <div class="posts__post-info">
+                            <ul class="posts__post-header-list">
+                                <li class="posts__post-header-item">
+                                    Novemb<span class="has-underline">er 2</span>, 2022
+                                </li>
+                                <li class="posts__post-header-item">
+                                    c<span class="has-underline">ortad</span>o
+                                </li>
+                            </ul>
+                            <h3 class="posts__post-title title-small">The Baristan Kettle is a Beacon for Preparation</h3>
+                        </div>
+                        <button class="posts__view-more-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
+                    </div>
+                </li>
+                <li class="posts__item">
+                    <img src="./images/posts/6.png" alt="leaves" class="posts__post-image">
+                    <div class="posts__item-wrapper">
+                        <div class="posts__post-info">
+                            <ul class="posts__post-header-list">
+                                <li class="posts__post-header-item">
+                                    Novemb<span class="has-underline">er 2</span>, 2022
+                                </li>
+                                <li class="posts__post-header-item">
+                                    c<span class="has-underline">ortad</span>o
+                                </li>
+                            </ul>
+                            <h3 class="posts__post-title title-small">The World’s Best Coffee Tours: Brasil, Columbi</h3>
+                        </div>
+                        <button class="posts__view-more-button view-more-button button--transparent--without-border has-arrow" type="button">
+                            View more
+                        </button>
                     </div>
                 </li>
             </ul>
