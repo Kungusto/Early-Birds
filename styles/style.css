@@ -106,6 +106,10 @@ a:hover {
     color: var(--color-text-muted);
 }
 
+.description {
+    font-size: clamp(12px, 0.93vw, 18px);
+}
+
 .title-tiny {
     font-size: clamp(14px, 1.3vw, 25px);
     font-weight: 400;
@@ -836,6 +840,42 @@ button.coffee-centers__other-cities-item:hover {
     min-height: clamp(20px, 2.08vw,  41px);
 }
 
+/* team */
+.team {
+    display: flex;
+    flex-direction: column;
+    border-bottom: var(--base-border);
+}
+
+.team__list {
+    display: flex;
+    border-top: var(--base-border);
+}
+
+.team__title {
+    padding-left: 50px;
+    padding-top: 35px;
+    padding-bottom: 31px;
+}
+
+.team__member {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 20px;
+
+    padding-inline: 27px;
+    padding-top: 38px;
+    padding-bottom: 40px;
+    flex-grow: 1;
+}
+
+.team__member:not(:last-child) {
+    border-right: var(--base-border);
+}
+
+
+
 
 @media (max-width: 1700px) {
     .coffee-centers {
@@ -987,6 +1027,16 @@ button.coffee-centers__other-cities-item:hover {
     .reserve-table__title {
         font-size: 30px;
     }
+    .team__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .team__member {
+        border-bottom: var(--base-border);
+    }
+    .team__title {
+        padding-left: 40px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1066,5 +1116,13 @@ button.coffee-centers__other-cities-item:hover {
     }
     .menu-food__body-title br {
         display: none;
+    }
+    .team__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .team__title {
+        font-size: 40px;
+        padding-left: 30px;
     }
 }
