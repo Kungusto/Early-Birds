@@ -1003,6 +1003,8 @@ button.coffee-centers__other-cities-item:hover {
     column-gap: 54px;
     padding-block: 137px;
     padding-left: 118px;
+
+    border-bottom: var(--base-border);
 }
 
 .about-section__body {
@@ -1021,6 +1023,43 @@ button.coffee-centers__other-cities-item:hover {
 
 .about-section__body-title:not(:last-child) {
     padding-bottom: 12px;
+}
+
+/* suppliers-menu */
+.suppliers-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.suppliers-menu__companies {
+    grid-template-columns: repeat(5, 1fr);
+    display: grid;
+
+    border-top: var(--base-border);
+}
+
+.suppliers-menu__companie-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 114px;
+
+    flex-grow: 1;
+}
+
+.suppliers-menu__companie-image-wrapper:not(:last-child) {
+    border-right: var(--base-border);
+}
+
+.suppliers-menu__companie-image {
+    justify-content: center;
+    align-items: center;
+}
+
+.suppliers-menu__title {
+    padding-top: 34px;
+    padding-left: 50px;
+    padding-bottom: 11px;
 }
 
 
@@ -1130,6 +1169,15 @@ button.coffee-centers__other-cities-item:hover {
     .about-section {
         padding-block: 50px;
     }
+    .suppliers-menu__companies {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .suppliers-menu__companie-image-wrapper {
+        border-bottom: var(--base-border);
+    }
+    .suppliers-menu__companie-image-wrapper:last-child {
+        border-right: var(--base-border);
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1223,6 +1271,13 @@ button.coffee-centers__other-cities-item:hover {
     }
     .about-section {
         padding-block: 40px;
+    }
+    .suppliers-menu__companies {
+        grid-template-columns: repeat(2, 1fr);
+    }  
+    .suppliers-menu__title {
+        padding-left: 20px;
+        font-size: 50px;
     }
 }
 
@@ -1343,4 +1398,10 @@ button.coffee-centers__other-cities-item:hover {
     .about-section {
         padding-block: 30px;
     }
+    .suppliers-menu__companies {
+        grid-template-columns: repeat(1, 1fr);
+    }  
+    .suppliers-menu__title {
+        font-size: 40px;
+    } 
 }
