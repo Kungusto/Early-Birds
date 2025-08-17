@@ -15,6 +15,15 @@
     font-display: swap;
 }
 
+
+@font-face {
+    font-family: "Mansalva";
+    src: url("../fonts/Mansalva-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: wrap;
+}
+
 :root {
     --color-dark-primary: #202020;
     --color-dark-secondary: #1D1D1B;
@@ -1029,6 +1038,8 @@ button.coffee-centers__other-cities-item:hover {
 .suppliers-menu {
     display: flex;
     flex-direction: column;
+
+    border-bottom: var(--base-border);
 }
 
 .suppliers-menu__companies {
@@ -1062,6 +1073,64 @@ button.coffee-centers__other-cities-item:hover {
     padding-bottom: 11px;
 }
 
+/* our-coffee */
+.our-coffee {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.our-coffee__body {
+    display: flex;
+    align-items: center;
+    padding-left: 163px;
+}
+
+.our-coffee__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+}
+
+.our-coffee__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.our-coffee__coffee-title-price {
+    display: flex;
+    align-items: end;
+}
+
+.our-coffee__coffee-title-wrapper {
+    display: flex;
+    align-items: end;
+    width: max(200px, 26.04vw);
+}
+
+.dotted-line:not(:last-child) {
+    padding-right: 350px;
+}
+
+.our-coffee__image-wrapper {
+    position: relative;
+}
+
+.our-coffe__image-title {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    font-size: clamp(50px, 7.53vw, 110px);
+    color: var(--color-accent);
+    text-align: center;
+    font-family: "Mansalva"
+}    
+
+.our-coffee__coffee-title {
+    font-size: clamp(14px, 1.04vw, 20px)
+}
 
 
 @media (max-width: 1700px) {
@@ -1178,6 +1247,9 @@ button.coffee-centers__other-cities-item:hover {
     .suppliers-menu__companie-image-wrapper:last-child {
         border-right: var(--base-border);
     }
+    .our-coffee__body {
+        padding-left: 110px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1278,6 +1350,23 @@ button.coffee-centers__other-cities-item:hover {
     .suppliers-menu__title {
         padding-left: 20px;
         font-size: 50px;
+    }
+    .our-coffee__body {
+        padding-left: 0;
+        justify-content: center;
+        padding-block: 20px;
+    }
+    .our-coffee__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+    .our-coffee {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .our-coffee__coffee-title-price {
+        column-gap: 15px;
     }
 }
 
@@ -1404,4 +1493,7 @@ button.coffee-centers__other-cities-item:hover {
     .suppliers-menu__title {
         font-size: 40px;
     } 
+    .our-coffee__list {
+        grid-template-columns: 1fr; 
+    }
 }
